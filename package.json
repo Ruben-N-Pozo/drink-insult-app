@@ -1,0 +1,26 @@
+{
+  "name": "drink-insult-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphakamiguru/drink-insult-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphakamiguru/drink-insult-app/issues"
+  },
+  "homepage": "https://github.com/alphakamiguru/drink-insult-app#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
