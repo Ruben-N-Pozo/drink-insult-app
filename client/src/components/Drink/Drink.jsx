@@ -16,7 +16,10 @@ getInsults = () => {
   axios.get("/insult")
   .then((res)=> this.setState({randomInsult:res.data.insult}))
 }
+refresh = (e) => {
+e.location.reload()
 
+}
 
   componentDidMount() {
     this.getInsults()
@@ -39,8 +42,12 @@ getInsults = () => {
 
         
         <img src={this.state.randomImg} alt="#" />
+
         <p>{this.state.randomDrink}</p>
         <p>{this.state.randomInsult}</p>
+
+        <button onClick=''>new insult</button>
+
       </div>
     );
   }
