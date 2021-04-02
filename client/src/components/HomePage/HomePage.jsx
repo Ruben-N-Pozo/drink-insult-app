@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
  function HomePage() {
     return (
@@ -7,6 +8,7 @@ import React from 'react'
             <h3>Tired of losing  arguments when you're slightly(extremely) inebriated?!?!?!</h3>
             <h3>??</h3>
             <h3>...</h3>
+            <Link to="/drinks"><button>get your insult</button></Link>
 
         </div>
     )
