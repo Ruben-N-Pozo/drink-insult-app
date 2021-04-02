@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./Drink.scss"
 // import reactDom from "react-dom";
 import axios from "axios";
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 class Drink extends Component {
   state = {
@@ -16,10 +16,9 @@ getInsults = () => {
   axios.get("/insult")
   .then((res)=> this.setState({randomInsult:res.data.insult}))
 }
-refresh = (e) => {
-e.location.reload()
-
-}
+refreshpage = () => {
+  window.location.reload();
+};
 
   componentDidMount() {
     this.getInsults()
@@ -36,17 +35,18 @@ e.location.reload()
 
   render() {
     return (
-      <div className="App">
+      <div className="drinkDiv">
         <h1>Drunken Insults</h1>
-        <p>helping your drunk ass fight back since 1988</p>
+        <h3>Helping your drunk ass fight back since 1988</h3>
 
         
         <img src={this.state.randomImg} alt="#" />
-
+        <h3>Your New Drink</h3>
         <p>{this.state.randomDrink}</p>
+        <h3>Your New Insult</h3>
         <p>{this.state.randomInsult}</p>
 
-        <button onClick=''>new insult</button>
+        <button onClick={() => this.refreshpage()}>new insult</button>
 
       </div>
     );

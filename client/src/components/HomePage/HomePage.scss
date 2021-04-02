@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "fancy";
+  src: url("../../assests/fonts/enjelina-font/EnjelinaDemo-JRJBj.otf");
+}
+@font-face {
+  font-family: "fancy2";
+  src: url("../../assests/fonts/SCRIPTIN.ttf");
+}
+* {
+  margin: 0;
+}
+.homeDiv {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "fancy";
+  background-color: purple;
+  margin-bottom: 2rem;
+
+  & h1 {
+    font-size: 6rem;
+    font-family: "fancy";
+    //   margin-bottom: 20rem;
+    margin-bottom: 2rem;
+  }
+  & h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  & p {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+button {
+  font-size: 1.5rem;
+  min-width: 4rem;
+  min-height: 3rem;
+  background-color: black;
+  color: purple;
+  font-family: "fancy";
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  &:hover {
+    color: blueviolet;
+  }
+}
